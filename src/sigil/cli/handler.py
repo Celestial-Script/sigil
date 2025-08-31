@@ -7,8 +7,8 @@ Command-line interface handling and argument parsing for 云篆 (sigil).
 import argparse
 from typing import List, Optional
 
-from models import SVGConfig
-from utils import UtilityFunctions
+from ..core.models import SVGConfig
+from ..utils.functions import UtilityFunctions
 
 
 class CLIHandler:

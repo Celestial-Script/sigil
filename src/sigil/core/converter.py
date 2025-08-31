@@ -6,10 +6,10 @@ Main converter orchestrator for 云篆 (sigil) glyph to SVG conversion.
 
 from typing import List, Optional
 
-from font_processor import FontProcessor
-from glyph_extractor import GlyphExtractor
-from svg_generator import SVGGenerator
-from models import FontMetrics, SVGConfig
+from .font_processor import FontProcessor
+from .glyph_extractor import GlyphExtractor
+from .svg_generator import SVGGenerator
+from .models import FontMetrics, SVGConfig
 
 
 class SigilConverter:

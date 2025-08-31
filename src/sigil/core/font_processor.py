@@ -9,7 +9,7 @@ from typing import Dict, Optional
 
 from fontTools.ttLib import TTFont
 
-from models import FontMetrics
+from .models import FontMetrics
 
 
 class FontProcessor:

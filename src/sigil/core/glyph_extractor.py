@@ -10,8 +10,8 @@ from typing import Optional, Tuple
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.boundsPen import BoundsPen
 
-from font_processor import FontProcessor
-from models import GlyphData
+from .font_processor import FontProcessor
+from .models import GlyphData
 
 
 class GlyphExtractor:

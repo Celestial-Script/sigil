@@ -7,8 +7,8 @@ SVG generation functionality for converting glyph data to SVG format for 云篆 
 import re
 from typing import List, Optional, Tuple
 
-from models import GlyphData, FontMetrics, SVGConfig
-from utils import UtilityFunctions
+from .models import GlyphData, FontMetrics, SVGConfig
+from ..utils.functions import UtilityFunctions
 
 
 class SVGGenerator:

@@ -1,4 +1,4 @@
-# Glyph2SVG - Modular Font to SVG Converter
+# 云篆 (sigil) - Modular Font to SVG Converter
 
 A modular, object-oriented Python tool for converting font glyphs to SVG format with support for Chinese practice grids and Pinyin annotations.
 
@@ -26,7 +26,7 @@ The codebase has been refactored into a modular structure with clear separation 
   - `PinyinProcessor`: Handles Pinyin normalization and tone mark conversion
 
 - **`converter.py`** - Main orchestrator
-  - `Glyph2SVGConverter`: Coordinates the entire conversion pipeline
+  - `SigilConverter`: Coordinates the entire conversion pipeline
 
 - **`cli_handler.py`** - Command-line interface
   - `CLIHandler`: Argument parsing and configuration creation
@@ -44,13 +44,13 @@ The codebase has been refactored into a modular structure with clear separation 
 
 ```bash
 # Convert letter 'A' from system font
-python3 glyph2svg.py -f /System/Library/Fonts/Helvetica.ttc -c A
+python3 sigil.py -f /System/Library/Fonts/Helvetica.ttc -c A
 
 # Convert using Unicode codepoint
-python3 glyph2svg.py -f /System/Library/Fonts/Helvetica.ttc -c U+0041
+python3 sigil.py -f /System/Library/Fonts/Helvetica.ttc -c U+0041
 
 # Convert with custom styling
-python3 glyph2svg.py -f /System/Library/Fonts/Helvetica.ttc -c A \
+python3 sigil.py -f /System/Library/Fonts/Helvetica.ttc -c A \
     --fill "#FF6B6B" --stroke "#4ECDC4" --stroke-width 2 \
     --px-size 200 -o styled_A.svg
 ```
@@ -70,20 +70,20 @@ python3 glyph2svg.py -f /System/Library/Fonts/Helvetica.ttc -c A \
 
 ```bash
 # Single character with 田字格 (Tian grid) and Pinyin
-python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -c 中 \
+python3 sigil.py -f /System/Library/Fonts/PingFang.ttc -c 中 \
     --grid tian --pinyin "zhong1" \
     --grid-color "#E0E0E0" --fill "#2C3E50" \
     --px-size 300 -o zhong_practice.svg
 
 # Multiple characters for word practice
-python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -t "你好世界" \
+python3 sigil.py -f /System/Library/Fonts/PingFang.ttc -t "你好世界" \
     --grid tian --pinyin "ni3,hao3,shi4,jie4" \
     --pinyin-pos top --pinyin-size "20%" \
     --tian-frac 0.7 --tian-preserve-aspect \
     --px-size 400 -o hello_world_practice.svg
 
 # Practice sheet with 米字格 (Mi grid) for detailed stroke guidance
-python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -c 龍 \
+python3 sigil.py -f /System/Library/Fonts/PingFang.ttc -c 龍 \
     --grid mi --pinyin "long2" \
     --grid-border-width "2%" --grid-guide-width "0.8%" \
     --grid-dash "3,3" --fill "#1A1A1A" \
@@ -108,18 +108,18 @@ python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -c 龍 \
 
 ```bash
 # Logo-style text with tight bounding box
-python3 glyph2svg.py -f /System/Library/Fonts/HelveticaNeue.ttc -t "DESIGN" \
+python3 sigil.py -f /System/Library/Fonts/HelveticaNeue.ttc -t "DESIGN" \
     --bbox tight --margin "5%" \
     --fill "url(#gradient)" --stroke "#333" --stroke-width 1.5 \
     --px-size 150 -o design_logo.svg
 
 # Calligraphy-style with custom cell sizing
-python3 glyph2svg.py -f /System/Library/Fonts/Brush\ Script\ MT.ttc -t "Script" \
+python3 sigil.py -f /System/Library/Fonts/Brush\ Script\ MT.ttc -t "Script" \
     --bbox em --cell-size "120%" --margin "10%" \
     --fill "#8B4513" --px-size 200 -o script_text.svg
 
 # Technical diagram with precise measurements
-python3 glyph2svg.py -f /System/Library/Fonts/Monaco.ttc -c "∑" \
+python3 sigil.py -f /System/Library/Fonts/Monaco.ttc -c "∑" \
     --bbox em --margin 50 --fill "#2E86AB" \
     --px-size 100 -o sigma_symbol.svg
 ```
@@ -137,15 +137,15 @@ python3 glyph2svg.py -f /System/Library/Fonts/Monaco.ttc -c "∑" \
 
 ### 4. Programmatic Usage Examples
 
-**Scenario**: Integrate glyph2svg into Python applications for dynamic SVG generation.
+**Scenario**: Integrate 云篆 (sigil) into Python applications for dynamic SVG generation.
 
 #### Basic Integration
 ```python
-from converter import Glyph2SVGConverter
+from converter import SigilConverter
 from models import SVGConfig
 
 # Initialize converter with font
-converter = Glyph2SVGConverter("/path/to/font.ttf")
+converter = SigilConverter("/path/to/font.ttf")
 converter.initialize()
 
 # Basic configuration
@@ -246,14 +246,14 @@ batch_convert_characters("NotoSansCJK.ttc", chinese_chars, "seasons_svg")
 
 ```bash
 # Stroke order practice (using grid guides)
-python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -c 木 \
+python3 sigil.py -f /System/Library/Fonts/PingFang.ttc -c 木 \
     --grid mi --pinyin "mu4" \
     --grid-color "#FFE5B4" --grid-dash "2,4" \
     --fill "none" --stroke "#8B4513" --stroke-width 3 \
     --px-size 400 -o wood_stroke_practice.svg
 
 # Phonetic learning with multiple pronunciation examples
-python3 glyph2svg.py -f /System/Library/Fonts/PingFang.ttc -t "妈麻马骂" \
+python3 sigil.py -f /System/Library/Fonts/PingFang.ttc -t "妈麻马骂" \
     --grid square --pinyin "ma1,ma2,ma3,ma4" \
     --pinyin-font "Arial" --pinyin-size "15%" \
     --fill "#4A90E2" --px-size 600 -o ma_tones.svg

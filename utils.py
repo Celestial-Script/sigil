@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Utility functions for parsing, formatting, and text processing.
+Utility functions for parsing, formatting, and text processing for 云篆 (sigil).
 """
 
 import re

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Main entry point for glyph2svg with backward compatibility.
+Main entry point for 云篆 (sigil) with backward compatibility.
 """
 
 import sys
 
 from cli_handler import CLIHandler
-from converter import Glyph2SVGConverter
+from converter import SigilConverter
 from pinyin_processor import PinyinProcessor
 from utils import UtilityFunctions
 
@@ -19,7 +19,7 @@ def main() -> None:
     
     try:
         # Initialize converter
-        converter = Glyph2SVGConverter(args.font, args.index)
+        converter = SigilConverter(args.font, args.index)
         converter.initialize()
         
         # Parse characters

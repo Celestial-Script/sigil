@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pinyin processing and tone mark conversion functionality.
+Pinyin processing and tone mark conversion functionality for 云篆 (sigil).
 """
 
 import re

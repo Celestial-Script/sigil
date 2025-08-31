@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Data models and configuration classes for glyph2svg.
+Data models and configuration classes for 云篆 (sigil).
 """
 
 from dataclasses import dataclass

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SVG generation functionality for converting glyph data to SVG format.
+SVG generation functionality for converting glyph data to SVG format for 云篆 (sigil).
 """
 
 import re

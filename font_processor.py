@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Font processing and loading functionality.
+Font processing and loading functionality for 云篆 (sigil).
 """
 
 import os

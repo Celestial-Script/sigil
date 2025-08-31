@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Glyph data extraction and transformation functionality.
+Glyph data extraction and transformation functionality for 云篆 (sigil).
 """
 
 import sys

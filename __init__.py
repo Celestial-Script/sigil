@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-glyph2svg package: Export characters from fonts to SVG format.
+云篆 (sigil) package: Export characters from fonts to SVG format.
 """
 
-from .converter import Glyph2SVGConverter
+from .converter import SigilConverter
 from .models import GlyphData, FontMetrics, SVGConfig
 from .font_processor import FontProcessor
 from .glyph_extractor import GlyphExtractor
@@ -15,7 +15,7 @@ from .utils import UtilityFunctions
 
 __version__ = "2.0.0"
 __all__ = [
-    "Glyph2SVGConverter",
+    "SigilConverter",
     "GlyphData", 
     "FontMetrics", 
     "SVGConfig",

@@ -1,7 +1,7 @@
 [project]
-name = "font-api"
+name = "sigil"
 version = "0.1.0"
-description = "Add your description here"
+description = "云篆 (sigil): Export characters from a font to SVG, with optional Chinese practice grids and Hanyu Pinyin"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

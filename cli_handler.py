@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Command-line interface handling and argument parsing.
+Command-line interface handling and argument parsing for 云篆 (sigil).
 """
 
 import argparse
@@ -21,8 +21,8 @@ class CLIHandler:
     def _create_parser(self) -> argparse.ArgumentParser:
         """Create argument parser."""
         parser = argparse.ArgumentParser(
-            prog="glyph2svg",
-            description="Export characters from a font to SVG, with optional Chinese grids and Pinyin.",
+            prog="sigil",
+            description="云篆 (sigil): Export characters from a font to SVG, with optional Chinese grids and Pinyin.",
             formatter_class=argparse.RawTextHelpFormatter,
         )
         

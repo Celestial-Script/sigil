@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Main converter orchestrator for glyph to SVG conversion.
+Main converter orchestrator for 云篆 (sigil) glyph to SVG conversion.
 """
 
 from typing import List, Optional
@@ -12,8 +12,8 @@ from svg_generator import SVGGenerator
 from models import FontMetrics, SVGConfig
 
 
-class Glyph2SVGConverter:
-    """Main orchestrator class for glyph to SVG conversion."""
+class SigilConverter:
+    """Main orchestrator class for 云篆 (sigil) glyph to SVG conversion."""
     
     def __init__(self, font_path: str, font_index: int = 0):
         """

@@ -236,8 +236,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Built with [fontTools](https://github.com/fonttools/fonttools) for font processing
-- Inspired by traditional Chinese calligraphy practice methods
-- Thanks to all contributors and users of the project
+- Inspired by [traditional Chinese calligraphy practice methods](https://github.com/mengxianghan/xy-character)
 
 ## Changelog
 

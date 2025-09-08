@@ -27,7 +27,7 @@ pip install sigil
 ### From Source
 
 ```bash
-git clone https://github.com/sigil-dev/sigil.git
+git clone https://github.com/Celestial-Script/sigil.git
 cd sigil
 pip install -e .
 ```
@@ -35,7 +35,7 @@ pip install -e .
 ### Development Installation
 
 ```bash
-git clone https://github.com/sigil-dev/sigil.git
+git clone https://github.com/Celestial-Script/sigil.git
 cd sigil
 pip install -e ".[dev,test,docs]"
 ```
@@ -187,7 +187,7 @@ pytest tests/integration/   # Integration tests only
 ### Setting up Development Environment
 
 ```bash
-git clone https://github.com/sigil-dev/sigil.git
+git clone https://github.com/Celestial-Script/sigil.git
 cd sigil
 pip install -e ".[dev]"
 ```
@@ -245,5 +245,5 @@ See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes.
 ## Support
 
 - 📖 [Documentation](https://sigil.readthedocs.io)
-- 🐛 [Issue Tracker](https://github.com/sigil-dev/sigil/issues)
-- 💬 [Discussions](https://github.com/sigil-dev/sigil/discussions)
+- 🐛 [Issue Tracker](https://github.com/Celestial-Script/sigil/issues)
+- 💬 [Discussions](https://github.com/Celestial-Script/sigil/discussions)
